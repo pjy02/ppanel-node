@@ -23,8 +23,8 @@ import (
 
 	"github.com/go-acme/lego/v4/certcrypto"
 	"github.com/go-acme/lego/v4/lego"
-	"github.com/perfect-panel/ppanel-node/api/panel"
-	"github.com/perfect-panel/ppanel-node/common/file"
+	"github.com/pjy02/ppanel-node/api/panel"
+	"github.com/pjy02/ppanel-node/common/file"
 )
 
 type Lego struct {

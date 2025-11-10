@@ -6,11 +6,11 @@ import (
 	"runtime"
 	"syscall"
 
-	"github.com/perfect-panel/ppanel-node/api/panel"
-	"github.com/perfect-panel/ppanel-node/conf"
-	"github.com/perfect-panel/ppanel-node/core"
-	"github.com/perfect-panel/ppanel-node/limiter"
-	"github.com/perfect-panel/ppanel-node/node"
+	"github.com/pjy02/ppanel-node/api/panel"
+	"github.com/pjy02/ppanel-node/conf"
+	"github.com/pjy02/ppanel-node/core"
+	"github.com/pjy02/ppanel-node/limiter"
+	"github.com/pjy02/ppanel-node/node"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

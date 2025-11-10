@@ -3,9 +3,9 @@ package node
 import (
 	"fmt"
 
-	"github.com/perfect-panel/ppanel-node/api/panel"
-	"github.com/perfect-panel/ppanel-node/conf"
-	vCore "github.com/perfect-panel/ppanel-node/core"
+	"github.com/pjy02/ppanel-node/api/panel"
+	"github.com/pjy02/ppanel-node/conf"
+	vCore "github.com/pjy02/ppanel-node/core"
 )
 
 type Node struct {

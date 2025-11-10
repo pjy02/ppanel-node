@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/juju/ratelimit"
-	"github.com/perfect-panel/ppanel-node/api/panel"
-	"github.com/perfect-panel/ppanel-node/common/format"
+	"github.com/pjy02/ppanel-node/api/panel"
+	"github.com/pjy02/ppanel-node/common/format"
 )
 
 var limitLock sync.RWMutex

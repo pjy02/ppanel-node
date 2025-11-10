@@ -288,7 +288,15 @@ func buildShadowsocks(nodeInfo *panel.NodeInfo, inbound *coreConf.InboundDetourC
 	randomPasswd := hex.EncodeToString(p)
 
 	if nodeInfo.Protocol.ServerKey != "" && strings.Contains(cipher, "2022") {
-		nodeInfo.Protocol.ServerKey = base64.RawStdEncoding.EncodeToString([]byte(nodeInfo.Protocol.ServerKey))
+		serverKey := strings.TrimSpace(nodeInfo.Protocol.ServerKey)
+		if _, err := base64.StdEncoding.DecodeString(serverKey); err != nil {
+			if decoded, err := base64.RawStdEncoding.DecodeString(serverKey); err == nil {
+				serverKey = base64.StdEncoding.EncodeToString(decoded)
+			} else {
+				serverKey = base64.StdEncoding.EncodeToString([]byte(serverKey))
+			}
+		}
+		nodeInfo.Protocol.ServerKey = serverKey
 		settings.Password = nodeInfo.Protocol.ServerKey
 		randomPasswd = base64.StdEncoding.EncodeToString([]byte(randomPasswd))
 		cipher = ""
